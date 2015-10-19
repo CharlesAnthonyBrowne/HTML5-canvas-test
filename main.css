@@ -1,0 +1,31 @@
+/* applies to GIF and PNG images; avoids blurry edges */
+img[src$=".gif"], img[src$=".png"], img[src$=".svg"] {
+                   image-rendering: -moz-crisp-edges;         /* Firefox */
+                   image-rendering:   -o-crisp-edges;         /* Opera */
+                   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+                   image-rendering: crisp-edges;
+                   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+                 }
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  margin: 0;
+  float: right;
+}
+
+#c-wrapper {
+  width: 80%;
+  display: inline-block;
+  position: relative;
+}
+
+#emoji_container {
+  float: left;
+  width: 20%;
+  height: 100vh;
+  background: red;
+}
